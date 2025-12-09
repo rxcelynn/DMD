@@ -96,7 +96,8 @@ body.dark .page-title {
   color: #d9caff;
 }
 
-body.dark .subtitle {
+body.dark .subtitle,
+body.dark .p{
   color: #b8a3d9;
 }
 
@@ -112,7 +113,8 @@ body.dark .mode-btn{
 }
 
 body.dark .settings-card h2,
-body.dark .mb {
+body.dark .mb,
+body.dark .mb-3 {
   color: #d9caff;
   border-bottom-color: #5e20a8;
 }
@@ -137,3 +139,116 @@ body.dark .btn-save {
 body.dark .btn-save:hover {
   background: #5e20a8;
 }
+/* ======================================= */
+/* DARK MODE OVERRIDES (DASHBOARD & CARDS) */
+/* Mas Malakas na Specificity */
+/* ======================================= */
+
+/* --- APP CONTENT & GENERAL TEXT --- */
+body.dark .app-content {
+    color: #ffffff !important; 
+}
+
+/* Titles and Subtitles */
+body.dark .app-content h2,
+body.dark .app-content h5 {
+    color: #ffffff !important;
+}
+
+body.dark .app-content .text-muted {
+    color: #cccccc !important;
+}
+
+/* --- CARD CONTAINERS (Ito ang nagko-conflict) --- */
+
+/* I-override ang general Bootstrap .card class */
+body.dark .card {
+    background-color: #242424 !important;
+    border: 1px solid #444444 !important;
+    color: #ffffff !important; 
+}
+
+/* Specific overrides for Metric and Box */
+body.dark .card-metric,
+body.dark .card-box {
+    background: #242424 !important; /* Dark charcoal background */
+    color: #ffffff !important; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); 
+    border: 1px solid #444444 !important; 
+}
+
+/* Metric text colors (Titles and Values) */
+body.dark .card-metric h6,
+body.dark .card-metric h2 {
+    color: #ffffff !important;
+}
+
+/* Ensure colored Bootstrap classes are visible on dark background */
+body.dark .card-metric .text-warning {
+    color: #ffc107 !important; 
+}
+body.dark .card-metric .text-success {
+    color: #28a745 !important;
+}
+
+/* --- CALENDAR --- */
+body.dark .calendar-header {
+    background-color: #3b1366 !important; /* Dark purple background */
+    color: #ffffff !important;
+}
+
+body.dark .calendar-header .date-display,
+body.dark .calendar-header .navigation {
+    color: #ffffff !important;
+}
+
+body.dark .day-label,
+body.dark .day-number {
+    color: #ffffff !important;
+}
+
+body.dark .day-number.active-day {
+    background-color: #6d28d9 !important; 
+    color: white !important;
+}
+
+body.dark .calendar-divider {
+    border-color: #444444 !important; 
+}
+
+body.dark .time-footer .time-label,
+body.dark .time-footer .current-time {
+    color: #ffffff !important;
+}
+
+body.dark .time-footer small {
+    color: #cccccc !important;
+}
+
+/* --- RECENT ACTIVITY LIST (List Group Items) --- */
+
+/* Force all list items to have dark-friendly background/text */
+body.dark .list-group-item {
+    background-color: transparent !important; 
+    border-bottom: 1px solid #333333 !important; 
+    color: #cccccc !important; 
+}
+
+body.dark .list-group-item:last-child {
+    border-bottom: none !important;
+}
+
+/* Ensure icons/specific colors are correct */
+body.dark .list-group-item .text-success {
+    color: #28a745 !important; 
+}
+body.dark .list-group-item .text-primary {
+    color: #007bff !important; 
+}
+body.dark .list-group-item .text-warning {
+    color: #ffc107 !important;
+}
+body.dark .list-group-item .text-secondary {
+    color: #a0a0a0 !important;
+}
+/* ======================================= */

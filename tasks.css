@@ -344,7 +344,121 @@
 .notification.error {
     background-color: #dc3545; 
 }
+/* ======================================= */
+/* DARK MODE OVERRIDES (TASKS & MODAL ONLY) */
+/* Ultra-Soft & High Readability Colors */
+/* ======================================= */
 
+/* --- TASKS (EISENHOWER MATRIX) --- */
+body.dark .quad {
+    /* Soft, deep navy/indigo background */
+    background: #2b354d; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    border: 1px solid #455273; /* Subtle, crisp border */
+}
+
+body.dark .quad-header {
+    color: #ffffff; /* Pure White for maximum contrast and visibility */
+}
+
+body.dark .task {
+    /* Individual Task item (Lighter, soft indigo) */
+    background: #3c4966; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border: 1px solid #546282; 
+}
+
+body.dark .task-title {
+    color: #ffffff; /* Pure White text */
+}
+
+body.dark .task-title.completed {
+    color: #92a0c4; /* Soft blue-gray for completed tasks */
+}
+
+body.dark .task-list {
+    color: #d1d9ec; /* Very light text color */
+}
+
+body.dark .task-action-btn {
+    color: #a0aed6; /* Button icon color */
+}
+
+body.dark .task-action-btn:hover {
+    background: #546282; /* Soft hover background */
+    color: #ffffff;
+}
+
+body.dark .no-tasks {
+    color: #7986a8; /* Soft subtle color */
+}
+
+/* Quadrant Colors (Mas vibrant at buhay tingnan) */
+/* Ginamitan ng mas mataas na saturation para "mag-pop" */
+body.dark .quad-red {
+    background: #733c50; /* Softer, muted crimson */
+    border: 3px solid #99546d;
+}
+
+body.dark .quad-yellow {
+    background: #70583c; /* Softer, muted gold */
+    border: 3px solid #997854;
+}
+
+body.dark .quad-blue {
+    background: #465f8c; /* Softer, vibrant blue */
+    border: 3px solid #6282b9;
+}
+
+body.dark .quad-green {
+    background: #4b7352; /* Softer, rich green */
+    border: 3px solid #6aa072;
+}
+
+/* --- MODAL STYLES (for Add/Edit Task Pop-up) --- */
+body.dark .modal-content {
+    background: #3c4966; /* Same as the task card for consistency */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    border: 1px solid #546282;
+}
+
+body.dark .modal-header {
+    border-bottom: 1px solid #546282;
+}
+
+body.dark .modal-subtitle {
+    color: #d1d9ec;
+}
+
+body.dark .modal-close-btn {
+    color: #a0aed6;
+}
+
+body.dark .modal-close-btn:hover {
+    color: #ffffff;
+}
+
+body.dark .form-group label {
+    color: #d1d9ec;
+}
+
+/* Input fields inside the modal */
+body.dark .form-group input[type="text"],
+body.dark .form-group textarea {
+    background: #2b354d; /* Darker than the modal background */
+    color: #ffffff;
+    border: 2px solid #546282;
+}
+
+body.dark .modal-actions .cancel-btn {
+    background-color: #546282;
+    color: #d1d9ec;
+    border: 1px solid #6c7aa4;
+}
+
+body.dark .modal-actions .cancel-btn:hover {
+    background-color: #6c7aa4;
+}
 
 @media (max-width: 768px) {
     .sidebar { 
