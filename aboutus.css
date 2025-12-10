@@ -1,0 +1,393 @@
+:root {
+ 
+  --bg: #f6f2fc;
+  --sidebar: #3b1366;
+  --accent: #6d28d9;
+  --muted: #6b7280;
+  --card-bg: #ffffff;
+  --text-dark: #111827;
+  --link-text: #e7dfff;
+  --glass: #fbfbfd; 
+  --border-light: #f6f3fb; 
+  --kicker-bg: #f1e9fa; 
+  --accent-border: #e6d3f2;
+  --story-border-accent: #f2eefa;
+  --shadow-line: #f0ebf8; 
+  --shadow-box: #e7e4eb;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg);
+  color: var(--text-dark);
+  -webkit-font-smoothing: antialiased;
+}
+.sidebar, 
+.app-content, 
+.footer {
+  transition: margin-left .28s ease, width .28s ease, transform .28s ease, filter .28s ease; 
+}
+.sidebar {
+  width: 260px;
+  background-color: #3b1366; 
+  min-height: 100vh;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 15px;
+}
+
+.sidebar h5 {
+  font-size: 20px; 
+  font-weight: 700;
+  margin-bottom: 25px; 
+}
+
+.sidebar #menu-toggle {
+    display: none;
+}
+
+.sidebar .app-title {
+    display: block;
+}
+
+
+.app-content {
+  margin-left: 260px; 
+  min-height: 100vh;
+}
+
+.menu-item {
+  padding: 8px 15px; 
+  border-radius: 50px; 
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+  font-size: 14px; 
+  font-weight: 500;
+  transition: 0.2s ease;
+  color: #e7dfff;
+  text-decoration: none;
+}
+
+.menu-item i {
+  font-size: 18px; 
+}
+
+.menu-item.active {
+  background-color:  #6d28d9 ; 
+  color: #fff;
+}
+
+/* Hover */
+.menu-item:hover {
+  background-color: #7626db;
+  color: white;
+}
+
+.sidebar .menu-item:last-child {
+  margin-top: auto;
+}
+
+
+.feature-item,
+.story-section,
+.team-module {
+  border: 1px solid var(--border-light);
+}
+
+.feature-item, 
+.story-section {
+  background: linear-gradient(180deg, var(--glass), #fcfcfc);
+}
+
+.feature-item {
+  transition: all .28s ease;
+  height: 100%;
+}
+
+.feature-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px var(--shadow-box) !important; 
+  border-color: var(--accent-border);
+}
+
+.feature-item p,
+.story-section p {
+    text-align: justify;
+}
+
+.kicker {
+  background: var(--kicker-bg);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.feature-item h3 i {
+  color: var(--accent);
+}
+
+
+.story-section p.muted {
+  font-style: italic;
+  font-weight: 500;
+  color: var(--accent);
+  border-top: 1px solid var(--story-border-accent);
+  text-align: left; 
+}
+
+/* --- Team Profile  --- */
+
+.member-profile {
+  border: 1px solid #e0e0e0;
+  height: auto;
+  overflow: hidden;
+  transition: none;
+  cursor: default;
+}
+
+.member-profile:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px var(--shadow-box) !important; 
+  border-color: var(--accent-border);
+  transition: 0.2s;
+}
+
+
+.profile-photo-wrapper {
+  padding-top: 100%;
+  position: relative;
+}
+
+.profile-photo-wrapper::after {
+  content: '';
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 30px;
+  background: #f2eefa; 
+}
+
+.profile-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.member-name,
+.member-bio {
+  color: var(--muted);
+}
+
+/* Member Picture Color Overrides */
+.member-profile:nth-child(1) .profile-photo-wrapper::after { background: var(--kicker-bg); }
+.member-profile:nth-child(1) .member-role { color: var(--accent); }
+.member-profile:nth-child(2) .profile-photo-wrapper::after { background: var(--accent-border); }
+.member-profile:nth-child(2) .member-role { color: #7626db; } /* Link Hover Color */
+.member-profile:nth-child(3) .profile-photo-wrapper::after { background: var(--shadow-line); }
+.member-profile:nth-child(3) .member-role { color: var(--sidebar); }
+.member-profile:nth-child(4) .profile-photo-wrapper::after { background: var(--story-border-accent); }
+.member-profile:nth-child(4) .member-role { color: var(--muted); }
+.member-profile:nth-child(5) .profile-photo-wrapper::after { background: var(--link-text); }
+.member-profile:nth-child(5) .member-role { color: var(--accent); }
+
+/* Size Reduction for Team Profiles */
+.team-module .member-profile .profile-details {
+    padding: 0.75rem !important;
+}
+.team-module .member-profile .member-bio {
+    font-size: 0.8rem; 
+}
+
+/* footer */
+.footer {
+  margin-left: 260px;
+  background: #f0ebf8;
+  border-top: 1px solid var(--shadow-line);
+}
+.footer-nav a,
+.footer p {
+  color: var(--muted);
+}
+
+.footer-nav a:hover {
+  color: var(--accent);
+}
+
+/* Social Icons */
+.social-icon {
+  background: #f3eefb; 
+  color: var(--accent);
+}
+
+.social-icon:hover {
+  background: var(--accent);
+  color: #fff;
+}
+/* =========================================
+   DARK MODE OVERRIDES (About Us Content - Global)
+   NAAYOS ANG TEXT COLOR ISUESS
+   ========================================= */
+
+/* --- Content Text Overrides --- */
+/* Set the general text color for the main content area */
+body.dark .app-content {
+color: #f0f0f0 !important; /* LIGHT GRAY/WHITE color for visibility */
+}
+
+/* Page Titles and Subtitles */
+body.dark .page-title {
+color: #f0f0f0 !important;
+}
+body.dark .page-sub {
+color: #a0a0a0 !important; /* Muted Light Gray */
+}
+
+/* --- Card Backgrounds and Borders --- */
+body.dark .feature-item,
+body.dark .story-section,
+body.dark .team-module {
+background: #2a2a2a !important; 
+border: 1px solid #333333 !important; 
+box-shadow: none !important;
+}
+
+body.dark .member-profile {
+background: #353535 !important; 
+border: 1px solid #444444 !important; 
+}
+
+
+/* --- Hover and Shadow Overrides --- */
+body.dark .feature-item:hover {
+transform: translateY(-8px);
+box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5) !important; 
+border-color: #503d6d !important; 
+}
+body.dark .member-profile:hover {
+box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5) !important;
+border-color: #503d6d !important;
+}
+
+/* --- Text and Accent Colors --- */
+body.dark .kicker {
+background: #381a5a !important; 
+color: #9b5cf6 !important; 
+}
+
+/* Headings (h1, h2, h3, etc. inside app-content) */
+body.dark .feature-item h3,
+body.dark .member-name,
+body.dark .team-module h3,
+body.dark .app-content h1,
+body.dark .app-content h2,
+body.dark .app-content h3 { /* Added generic h2/h3 for completeness */
+color: #f0f0f0 !important; /* Light text for titles */
+}
+
+/* Paragraphs and Bios */
+body.dark .feature-item p,
+body.dark .story-section p,
+body.dark .member-bio {
+color: #a0a0a0 !important; 
+}
+
+body.dark .story-section p.muted {
+color: #9b5cf6 !important;
+border-top: 1px solid #454545 !important; 
+}
+
+/* --- Team Profile After Element --- */
+body.dark .member-profile:nth-child(1) .profile-photo-wrapper::after { background: #381a5a !important; } 
+body.dark .member-profile:nth-child(2) .profile-photo-wrapper::after { background: #503d6d !important; }
+body.dark .member-profile:nth-child(3) .profile-photo-wrapper::after { background: #3a3a3a !important; } 
+body.dark .member-profile:nth-child(4) .profile-photo-wrapper::after { background: #454545 !important; }
+body.dark .member-profile:nth-child(5) .profile-photo-wrapper::after { background: #c1b3e8 !important; }
+
+
+/* --- Social Icons --- */
+body.dark .social-icon {
+background: #353535 !important; 
+color: #9b5cf6 !important;
+}
+body.dark .social-icon:hover {
+background: #9b5cf6 !important;
+ color: #fff !important;
+}
+
+@media (max-width: 1024px) {
+    .app-content,
+    .footer {
+        padding: 30px;
+        margin-left: 0;
+    }
+    .sidebar { 
+        width: 70px; 
+        padding: 16px 0; 
+    }
+    .sidebar .nav-header { 
+        justify-content: center !important;
+        padding-bottom: 24px;
+    }
+    .sidebar #menu-toggle { 
+        display: block !important; 
+    }
+    .sidebar .app-title { 
+        display: none;
+    }
+    .menu-item { 
+        justify-content: center;
+        padding: 12px 0;
+    }
+    .menu-item .menu-text { 
+        display: none; 
+    }
+    .sidebar.nav-open { 
+        width: 260px; 
+        padding: 24px 16px; 
+        z-index: 1050; 
+    }
+    .sidebar.nav-open .nav-header { 
+        justify-content: space-between !important;
+    }
+    .sidebar.nav-open .app-title { 
+        display: block; 
+    }
+    .sidebar.nav-open .menu-item { 
+        justify-content: flex-start;
+        padding: 10px 16px;
+    }
+    .sidebar.nav-open .menu-item .menu-text { 
+        display: inline;
+    }
+    .sidebar.nav-open #menu-toggle {
+        display: none !important;
+    }
+    .app-content {
+        margin-left: 70px; 
+        padding: 18px; 
+    }
+    .footer {
+        margin-left: 70px; 
+        padding: 20px 18px; 
+    }
+        
+    
+    /* --- blur --- */
+    .app-content.blur-content,
+    .footer.blur-content {
+        filter: blur(4px); 
+        cursor: pointer; 
+        pointer-events: auto; 
+        user-select: none; 
+    }
+   
+
+    .profile-shrink-mobile {
+        max-width: 250px;
+    }
+}

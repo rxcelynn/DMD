@@ -22,7 +22,7 @@
   padding: 20px;
   border-radius: 16px;
   box-shadow: 0 0 10px rgba(0,0,0,0.05);
-  min-height: 500px; 
+  min-height: 500px;    
 }
 
 /* calendar */
@@ -131,7 +131,7 @@
 
 
 
-@media (max-width: 1100px) {
+@media (max-width: 100px) {
   .app-content {
     padding: 30px;
     margin-left: 0;
@@ -191,121 +191,121 @@
         display: none !important;
     }
     /* ======================================= */
-/* DARK MODE OVERRIDES (DASHBOARD CONTENT) */
-/* Adjusted High Contrast to FORCE White Text on Dark Cards */
-/* ======================================= */
+    /* DARK MODE OVERRIDES (DASHBOARD CONTENT) */
+    /* Adjusted High Contrast to FORCE White Text on Dark Cards */
+    /* ======================================= */
 
-/* --- APP CONTENT & GENERAL TEXT --- */
-body.dark .app-content {
-    color: #ffffff !important; /* Force white text on main content area */
-}
+    /* --- APP CONTENT & GENERAL TEXT --- */
+    body.dark .app-content {
+        color: #ffffff !important; /* Force white text on main content area */
+    }
 
-/* Titles and Subtitles */
-body.dark .app-content h2,
-body.dark .app-content h5,
-body.dark .text-muted {
-    color: #ffffff !important;
-}
+    /* Titles and Subtitles */
+    body.dark .app-content h2,
+    body.dark .app-content h5,
+    body.dark .text-muted {
+        color: #ffffff !important;
+    }
 
-body.dark .app-content .text-muted {
-    color: #cccccc !important; /* Lighter gray for subtitles/muted text */
-}
+    body.dark .app-content .text-muted {
+        color: #cccccc !important; /* Lighter gray for subtitles/muted text */
+    }
 
-/* --- CARDS (Metrics & General Boxes) --- */
-body.dark .card-metric,
-body.dark .card-box {
-    background: #242424 !important; /* Dark charcoal background */
-    color: #ffffff !important; /* Force all default text inside to white */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); 
-    border: 1px solid #444444 !important; /* Added border for definition */
-}
+    /* --- CARDS (Metrics & General Boxes) --- */
+    body.dark .card-metric,
+    body.dark .card-box {
+        background: #242424 !important; /* Dark charcoal background */
+        color: #ffffff !important; /* Force all default text inside to white */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); 
+        border: 1px solid #444444 !important; /* Added border for definition */
+    }
 
-/* Metric text colors (Titles and Values) */
-body.dark .card-metric h6,
-body.dark .card-metric h2 {
-    color: #ffffff !important;
-}
+    /* Metric text colors (Titles and Values) */
+    body.dark .card-metric h6,
+    body.dark .card-metric h2 {
+        color: #ffffff !important;
+    }
 
-/* Ensure colored Bootstrap classes are visible on dark background */
-body.dark .card-metric .text-warning {
-    color: #ffc107 !important; 
-}
-body.dark .card-metric .text-success {
-    color: #28a745 !important;
-}
-body.dark .card-metric .text-primary {
-    color: #007bff !important;
-}
+    /* Ensure colored Bootstrap classes are visible on dark background */
+    body.dark .card-metric .text-warning {
+        color: #ffc107 !important; 
+    }
+    body.dark .card-metric .text-success {
+        color: #28a745 !important;
+    }
+    body.dark .card-metric .text-primary {
+        color: #007bff !important;
+    }
 
-/* --- CALENDAR --- */
-body.dark .calendar-header {
-    background-color: #3b1366 !important; /* Dark purple background */
-    color: #ffffff !important;
-}
+    /* --- CALENDAR --- */
+    body.dark .calendar-header {
+        background-color: #3b1366 !important; /* Dark purple background */
+        color: #ffffff !important;
+    }
 
-body.dark .calendar-header .date-display,
-body.dark .calendar-header .navigation {
-    color: #ffffff !important;
-}
+    body.dark .calendar-header .date-display,
+    body.dark .calendar-header .navigation {
+        color: #ffffff !important;
+    }
 
-/* Day labels (Sun, Mon, etc.) */
-body.dark .day-label {
-    color: #cccccc !important; 
-}
+    /* Day labels (Sun, Mon, etc.) */
+    body.dark .day-label {
+        color: #cccccc !important; 
+    }
 
-/* Day numbers */
-body.dark .day-number {
-    color: #ffffff !important;
-}
+    /* Day numbers */
+    body.dark .day-number {
+        color: #ffffff !important;
+    }
 
-body.dark .day-number.active-day {
-    background-color: #6d28d9 !important; 
-    color: white !important;
-}
+    body.dark .day-number.active-day {
+        background-color: #6d28d9 !important; 
+        color: white !important;
+    }
 
-/* Divider & Time Footer */
-body.dark .calendar-divider {
-    border-color: #444444 !important; 
-}
+    /* Divider & Time Footer */
+    body.dark .calendar-divider {
+        border-color: #444444 !important; 
+    }
 
-body.dark .time-footer .time-label,
-body.dark .time-footer .current-time {
-    color: #ffffff !important;
-}
+    body.dark .time-footer .time-label,
+    body.dark .time-footer .current-time {
+        color: #ffffff !important;
+    }
 
-body.dark .time-footer small {
-    color: #cccccc !important;
-}
+    body.dark .time-footer small {
+        color: #cccccc !important;
+    }
 
-/* --- RECENT ACTIVITY LIST --- */
-body.dark .card-box .list-group-item {
-    background-color: transparent !important; /* Background should be the card box color */
-    border-bottom: 1px solid #333333 !important; /* Darker separator line */
-    color: #cccccc !important; /* Default text color in list item */
-}
+    /* --- RECENT ACTIVITY LIST --- */
+    body.dark .card-box .list-group-item {
+        background-color: transparent !important; /* Background should be the card box color */
+        border-bottom: 1px solid #333333 !important; /* Darker separator line */
+        color: #cccccc !important; /* Default text color in list item */
+    }
 
-body.dark .card-box .list-group-item:last-child {
-    border-bottom: none !important;
-}
+    body.dark .card-box .list-group-item:last-child {
+        border-bottom: none !important;
+    }
 
-/* Ensure text colors in the list items are visible */
-body.dark .list-group-item span:not([class*="bg-"]) {
-    color: #cccccc !important; /* Force list item span text to be light, unless it's a badge */
-}
+    /* Ensure text colors in the list items are visible */
+    body.dark .list-group-item span:not([class*="bg-"]) {
+        color: #cccccc !important; /* Force list item span text to be light, unless it's a badge */
+    }
 
-/* Ensure icon colors are visible (text-success, text-primary, etc.) */
-body.dark .list-group-item .text-success {
-    color: #28a745 !important; 
-}
-body.dark .list-group-item .text-primary {
-    color: #007bff !important; 
-}
-body.dark .list-group-item .text-warning {
-    color: #ffc107 !important;
-}
-body.dark .list-group-item .text-secondary {
-    color: #a0a0a0 !important;
-}
+    /* Ensure icon colors are visible (text-success, text-primary, etc.) */
+    body.dark .list-group-item .text-success {
+        color: #28a745 !important; 
+    }
+    body.dark .list-group-item .text-primary {
+        color: #007bff !important; 
+    }
+    body.dark .list-group-item .text-warning {
+        color: #ffc107 !important;
+    }
+    body.dark .list-group-item .text-secondary {
+        color: #a0a0a0 !important;
+    }
     /* Content pushed by mini-sidebar (ALWAYS PUSHED 70px RIGHT ON MOBILE) */
     .app-content {
         margin-left: 70px; 

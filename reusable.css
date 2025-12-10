@@ -92,7 +92,7 @@ body.dark .content {
   color: #eaeaea;
 }
 
-body.dark .page-title {
+body.dark .page-title h1 {
   color: #d9caff;
 }
 
@@ -101,7 +101,9 @@ body.dark .p{
   color: #b8a3d9;
 }
 
-body.dark .setting-item .form-text {
+body.dark .setting-item,
+body.dark .form-text,
+body.dark .small {
     color: #c9b7ff; /* light purple for dark mode */
 }
 
@@ -223,6 +225,32 @@ body.dark .time-footer .current-time {
 
 body.dark .time-footer small {
     color: #cccccc !important;
+}
+
+/* =========================================
+   SIDEBAR DARK MODE OVERRIDES
+   ========================================= */
+body.dark {
+    background: #1f1f1f; 
+    color: #f0f0f0;
+}
+
+/* Sidebar Dark Mode */
+body.dark .sidebar {
+    background-color: #1e0933; /* Darker purple for sidebar */
+    color: #fff;
+}
+
+body.dark .menu-item {
+    color: #c1b3e8; /* Sidebar link text */
+}
+
+body.dark .menu-item:hover {
+    background-color: #381a5a;
+}
+
+body.dark .menu-item.active {
+    background-color: #6d28d9; /* Active accent color */
 }
 
 /* --- RECENT ACTIVITY LIST (List Group Items) --- */
